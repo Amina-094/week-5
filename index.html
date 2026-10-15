@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="calculator">
+
+        <header class="top-bar">
+            <span class="app-icon">▦</span>
+            <span>Calculator</span>
+            <span class="menu-icon">☰</span>
+        </header>
+
+        <div class="mode">
+            <h2>☰ Standard</h2>
+            <button id="historyButton" title="Calculation history"
+                    aria-label="Calculation history">◷</button>
+        </div>
+
+        <section class="display">
+            <div id="expression"></div>
+            <div id="result" aria-live="polite">0</div>
+        </section>
+
+        <!-- Calculation history -->
+        <section id="historyPanel" class="history-panel" hidden>
+            <div class="history-header">
+                <h3>History</h3>
+                <button id="clearHistory">Clear</button>
+            </div>
+            <div id="historyList"></div>
+        </section>
+
+        <!-- Memory buttons -->
+        <div class="memory-buttons">
+            <button data-action="memory" data-value="MC" disabled>MC</button>
+            <button data-action="memory" data-value="MR" disabled>MR</button>
+            <button data-action="memory" data-value="M+">M+</button>
+            <button data-action="memory" data-value="M-">M-</button>
+            <button data-action="memory" data-value="MS">MS</button>
+            <button data-action="memory" data-value="M">M⌄</button>
+        </div>
+
+        <!-- Calculator buttons -->
+        <div class="buttons">
+            <button class="function" data-action="percent">%</button>
+            <button class="function" data-action="clear-entry">CE</button>
+            <button class="function" data-action="clear">C</button>
+            <button class="function" data-action="backspace">⌫</button>
+
+            <button class="function" data-action="reciprocal">¹/x</button>
+            <button class="function" data-action="square">x²</button>
+            <button class="function" data-action="sqrt">√x</button>
+            <button class="operator" data-action="operator" data-value="÷">÷</button>
+
+            <button data-action="digit" data-value="7">7</button>
+            <button data-action="digit" data-value="8">8</button>
+            <button data-action="digit" data-value="9">9</button>
+            <button class="operator" data-action="operator" data-value="×">×</button>
+
+            <button data-action="digit" data-value="4">4</button>
+            <button data-action="digit" data-value="5">5</button>
+            <button data-action="digit" data-value="6">6</button>
+            <button class="operator" data-action="operator" data-value="−">−</button>
+
+            <button data-action="digit" data-value="1">1</button>
+            <button data-action="digit" data-value="2">2</button>
+            <button data-action="digit" data-value="3">3</button>
+            <button class="operator" data-action="operator" data-value="+">+</button>
+
+            <button data-action="sign">+/−</button>
+            <button data-action="digit" data-value="0">0</button>
+            <button data-action="decimal">.</button>
+            <button class="equals" data-action="equals">=</button>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
